@@ -1,2 +1,2 @@
 # paizascr
-Scraping the results of Paiza challenges.
+paizaのスキルチェックの詳細結果一覧を取得するためだけのunkoライブラリです。
