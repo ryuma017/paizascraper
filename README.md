@@ -21,7 +21,7 @@ paizaのスキルチェックの詳細結果一覧を取得するためだけの
     uncleared_probs = pa.uncleared_problems
 
     print(f'--- <提出済み問題> 合計:{len(all_submmited_probs)} ---', *all_submmited_probs, sep='\n')
-    print(f'--- <100点の問題> 合計:{len(all_submmited_probs)} ---', *cleared_probs, sep='\n')
-    print(f'--- <100点未満の問題> 合計:{len(all_submmited_probs)} ---', *uncleared_probs, sep='\n')
+    print(f'--- <100点の問題> 合計:{len(cleared_probs)} ---', *cleared_probs, sep='\n')
+    print(f'--- <100点未満の問題> 合計:{len(uncleared_probs)} ---', *uncleared_probs, sep='\n')
 
     pa.logout() # 多分絶対いらんけどログインしたらログアウトできたほうが気持ちいいじゃん。そんな人のための機能です。
