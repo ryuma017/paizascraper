@@ -10,9 +10,11 @@ paizaのスキルチェックの詳細結果一覧を取得するためだけの
 
     pa = PaizaAuthentication(email=email, password=password)
 
-    pa.login()
+    pa.login() #最初にログイン必須
 
-    pa.scrape_results(rank='b', shoud_display_log=True)
+    # 第一引数に取得したい問題のランク
+    # shoud_display_log=True にすると経過のログが出力されます(デフォルトはFalse)
+    pa.scrape_results('b', shoud_display_log=True)
 
     all_submmited_probs = pa.all_submmited_problems
     cleared_probs = pa.cleared_problems
@@ -22,4 +24,4 @@ paizaのスキルチェックの詳細結果一覧を取得するためだけの
     print(f'--- <100点の問題> 合計:{len(all_submmited_probs)} ---', *cleared_probs, sep='\n')
     print(f'--- <100点未満の問題> 合計:{len(all_submmited_probs)} ---', *uncleared_probs, sep='\n')
 
-    pa.logout()
+    pa.logout() # 多分絶対いらんけどログインしたらログアウトできたほうが気持ちいいじゃん。そんな人のための機能です。
