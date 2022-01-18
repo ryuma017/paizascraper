@@ -1,1 +1,0 @@
-from paizascr.authentication import PaizaAuthentication
