@@ -1,6 +1,9 @@
 # paizascr
 paizaのスキルチェックの詳細結果一覧を取得するためだけのライブラリです。
 
+### インストール
+    ＄ pip install https://github.com/ryuma017/paizascraper.git
+
 ## コード例
     import paizascraper as ps
 
