@@ -2,10 +2,10 @@
 paizaのスキルチェックの詳細結果一覧を取得するためだけのライブラリです。
 
 
-## インストール
+## 1.install
     ＄ pip install https://github.com/ryuma017/paizascraper.git
 
-## コード例
+## 2.code sample
     import paizascraper as ps
 
     email = 'your email'
