@@ -41,21 +41,6 @@ def scrape_eval_results():
 
         results_data[prob_num] = [prob_name, time, [[date, langage, score]]]
 
-        # results_data.append(
-        #     {
-        #         "prob_num": prob_num,
-        #         "prob_name": prob_name,
-        #         "answer_time": time,
-        #         "details": [
-        #             {
-        #                 "date": date,
-        #                 "langage": langage,
-        #                 "score": score
-        #             }
-        #         ]
-        #     }
-        # )
-
 
 def scrape_retry_results():
     response = session.get(RETRY_RESULTS_URL)
@@ -82,18 +67,6 @@ def scrape_retry_results():
                 score = boxM_inrTxt_span[5].get_text(strip=True)
 
             results_data[prob_num][2].append([date, langage, score])
-
-            # for result in results_data:
-            #     target_prob_num = result["prob_num"]
-            #     if target_prob_num == prob_num:
-            #         result["details"].append(
-            #             {
-            #                 "date": date,
-            #                 "langage": langage,
-            #                 "score": score,
-            #             }
-            #         )
-            #         break
 
 
         form = soup.find(name='form', attrs={'class': 'button_to'})
