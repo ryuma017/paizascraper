@@ -7,6 +7,7 @@ paizaのスキルチェックの詳細結果一覧を取得するためだけの
 
 ## 2. code sample
 コピペして`email`と`password`だけ書き換えれば使えまする
+
     import paizascraper as ps
 
     email = 'your email'
